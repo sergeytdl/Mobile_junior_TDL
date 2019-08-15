@@ -1,0 +1,11 @@
+# Ignore report files, screenshots, app files, logs
+*.json
+*.html
+*.png
+*.apk
+*.ipa
+*.txt
+*.log
+
+# Ignore Gemfile.lock as only Gemfile should specify gem versions
+Gemfile.lock
