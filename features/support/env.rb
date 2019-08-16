@@ -6,6 +6,7 @@ desired_capabilities = {
   'platformName' => 'Android',
   "appPackage": "com.zzkko",
   "appActivity": "com.zzkko.bussiness.login.ui.WelcomeActivity",
+  "automationName": "UIAutomator2",
   'noReset' => 'False'
 }
 p desired_capabilities

@@ -145,4 +145,26 @@ class Elements
     el = find_element
     el.click
   end
+
+  def isDisplayed
+    begin
+      el = $driver.find_element(@type, @value)
+      return true
+    rescue => e
+      exception = e
+      return false
+    end
+  end
+
+  def get_text(element_number = nil)
+    if element_number == nil 
+      el = find_element
+      el.text
+    else
+      el = find_elements
+      el[element_number].text
+    end
+  end
+
+
 end

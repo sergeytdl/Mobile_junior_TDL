@@ -7,7 +7,7 @@ class HomeScreen
     end
 
     def home_logo_visibility
-        @home_logo.isVisible
+        @home_logo.isDisplayed
     end
 
 
@@ -17,6 +17,11 @@ class HomeScreen
     end
     
     def open_me_screen
+        # $driver.close_app
+        # `adb shell am start -n com.zzkko/com.zzkko.bussiness.login.ui.WelcomeActivity`
+        # sleep(2)
+        # @coupon1_pop_up_window.click_if_visible
+        # @coupon2_pop_up_window.click_if_visible
         @me_button.click
         sleep (2)
     end
