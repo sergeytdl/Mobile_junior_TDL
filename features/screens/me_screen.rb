@@ -1,15 +1,16 @@
 class MeScreen
     def initialize
-        @log_in_part = Elements.new(:id,'com.zzkko:id/textView35')
-        @email_inputfield = Elements.new(:id,'com.zzkko:id/email_edt')
-        @password_inputfield = Elements.new(:id,'com.zzkko:id/pwdEdtTxt')
-        @privacy_policy_checkbox = Elements.new(:id,'com.zzkko:id/chbox_privacy_policy')
-        @login_or_register_button = Elements.new(:id,'com.zzkko:id/login_or_register_button')
+        @log_in_part = Elements.new(:id,'textView35')
+        @email_inputfield = Elements.new(:id,'email_edt')
+        @password_inputfield = Elements.new(:id,'pwdEdtTxt')
+        @privacy_policy_checkbox = Elements.new(:id,'chbox_privacy_policy')
+        @login_or_register_button = Elements.new(:id,'login_or_register_button')
         @confirm_currency_button = Elements.new(:xpath, '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.TextView[2]')
-        @log_in_tab = Elements.new(:xpath, '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.view.ViewGroup/android.widget.HorizontalScrollView/android.widget.LinearLayout/android.support.v7.app.ActionBar.Tab[1]')
+        @log_in_tab = Elements.new(:xpath, '//android.widget.TextView[@text="LOG IN"]')
         @my_name = Elements.new(:xpath, '//android.widget.TextView[@text="sergtest"]')
-        
+        @shop_button = Elements.new(:id,'com.zzkko:id/main_nav_shop')
     end
+    
 
     def choose_log_in_part
         @log_in_part.click
@@ -48,4 +49,9 @@ class MeScreen
     def my_name_displayed
         @my_name.wait_to_be_visible
     end
+
+    def go_shopping
+        @shop_button.click
+    end
+
 end

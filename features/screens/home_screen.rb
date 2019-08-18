@@ -1,12 +1,16 @@
 class HomeScreen
     def initialize
-        @home_logo = Elements.new(:id,'com.zzkko:id/appLogoView')
-        @coupon1_pop_up_window = Elements.new(:id,'com.zzkko:id/img_close')
-        @coupon2_pop_up_window = Elements.new(:id,'com.zzkko:id/iv_close')
-        @me_button = Elements.new(:id,'com.zzkko:id/main_nav_me')
+        @home_logo = Elements.new(:id,'appLogoView')
+        @coupon1_pop_up_window = Elements.new(:id,'cimg_close')
+        @coupon2_pop_up_window = Elements.new(:id,'iv_close')
+        @me_button = Elements.new(:id,'main_nav_me')
+        @search_field_button = Elements.new(:id, 'mainSearchMenu')
+        @search_inputfield = Elements.new(:id,'tv_searchbar_box')
+        @search_button = Elements.new(:id,'btn_searchbar_search')
     end
 
     def home_logo_visibility
+        sleep (4)
         @home_logo.isDisplayed
     end
 
@@ -26,5 +30,16 @@ class HomeScreen
         sleep (2)
     end
    
+    def open_search_page
+        @search_field_button.click
+        sleep (1)
+    end
+
+    def search_the_item(input)
+        @search_inputfield.click
+        @search_inputfield.set(input)
+        @search_button.click
+
+    end
 end
   

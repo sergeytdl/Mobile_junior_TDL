@@ -166,5 +166,21 @@ class Elements
     end
   end
 
+  def get_multiple_elements(type, value, wait: 30)
+    exception = ""
+    start = Time.now
+    while (Time.now - start) < wait
+      begin
+        el_list = $driver.find_elements(type, value)
+        raise "Element list is empty" if el_list.empty?
+        return el_list
+      rescue => e
+        exception = e
+        p "again multiple elements, #{type} -- #{value}"
+        sleep(0.1)
+      end
+    end
+    raise "Element #{type} -- #{value} is not visible after #{wait} seconds \n Exception: #{exception}"
+  end
 
 end

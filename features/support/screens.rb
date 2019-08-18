@@ -8,6 +8,11 @@ class Screens
     @me_screen ||= MeScreen.new
     @me_screen
   end
+
+  def search_screen
+    @search_screen ||= SearchScreen.new
+    @search_screen
+  end
   
 end
   
