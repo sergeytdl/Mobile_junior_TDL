@@ -10,7 +10,6 @@ end
 
 And (/^I open the first item in the list$/) do
     @screens.item_screen.open_first_item
-    sleep (3)
 end
 
 Then (/^The item is opened$/) do 

@@ -9,13 +9,12 @@ class CartScreen
     end
 
     def item_is_added
-        sleep (2)
         @added_item.isDisplayed
     end
 
     def delete_item_from_my_cart
         @delete_item_button.click
-        sleep (2)
+        
         @confirm_delete.click
     end
 

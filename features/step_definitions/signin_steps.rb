@@ -4,7 +4,6 @@ end
 
 And(/^I enter login data$/) do
     @screens.me_screen.enter_login_data
-    # sleep (2)
 end
 
 And(/^I'm logged in$/) do 

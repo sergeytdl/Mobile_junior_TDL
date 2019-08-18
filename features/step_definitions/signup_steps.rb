@@ -4,7 +4,6 @@ Given(/^I am on the main screen$/) do
 end
 
 When(/^I open Me part$/) do
-sleep (2)
 @screens.home_screen.open_me_screen
 end
 

@@ -5,7 +5,7 @@ class MeScreen
         @password_inputfield = Elements.new(:id,'pwdEdtTxt')
         @privacy_policy_checkbox = Elements.new(:id,'chbox_privacy_policy')
         @login_or_register_button = Elements.new(:id,'login_or_register_button')
-        @confirm_currency_button = Elements.new(:xpath, '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.TextView[2]')
+        @confirm_currency_button = Elements.new(:xpath, '//android.widget.TextView[@text="Go shopping"]')
         @log_in_tab = Elements.new(:xpath, '//android.widget.TextView[@text="LOG IN"]')
         @my_name = Elements.new(:xpath, '//android.widget.TextView[@text="sergtest"]')
         @shop_button = Elements.new(:id,'com.zzkko:id/main_nav_shop')
@@ -14,7 +14,7 @@ class MeScreen
 
     def choose_log_in_part
         @log_in_part.click
-        sleep (2)
+
     end
 
     def fulfill_required_fields
@@ -22,17 +22,17 @@ class MeScreen
         @email_inputfield.set("bla-bla#{random}@bla-bla.com")
         @password_inputfield.set("bhjghfgc#{random}")
         @privacy_policy_checkbox.click
-        sleep (2)
+        
     end
 
     def click_login_or_register
         @login_or_register_button.click
-        sleep (2)
+       
     end
 
     def confirm_currency
         @confirm_currency_button.click
-        sleep (2)
+       
     end
 
     def open_log_in_page

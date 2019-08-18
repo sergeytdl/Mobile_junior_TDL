@@ -10,7 +10,6 @@ class HomeScreen
     end
 
     def home_logo_visibility
-        sleep (4)
         @home_logo.isDisplayed
     end
 
@@ -27,12 +26,10 @@ class HomeScreen
         # @coupon1_pop_up_window.click_if_visible
         # @coupon2_pop_up_window.click_if_visible
         @me_button.click
-        sleep (2)
     end
    
     def open_search_page
         @search_field_button.click
-        sleep (1)
     end
 
     def search_the_item(input)
