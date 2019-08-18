@@ -10,7 +10,7 @@ class CartScreen
 
     def item_is_added
         sleep (2)
-        @added_item.isVisible
+        @added_item.isDisplayed
     end
 
     def delete_item_from_my_cart
@@ -20,7 +20,7 @@ class CartScreen
     end
 
     def validate_empty_cart
-        @empty_cart.isVisible
+        @empty_cart.isDisplayed
     end
 end
   
