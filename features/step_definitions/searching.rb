@@ -9,12 +9,12 @@ When(/^I search for an item "(.*)"$/) do |input|
 end
 
 And (/^I open the first item in the list$/) do
-    @screens.search_screen.open_first_item
+    @screens.item_screen.open_first_item
     sleep (3)
 end
 
 Then (/^The item is opened$/) do 
-# @screens.search_screen.correct_item_displayed
+# @screens.item_screen.correct_item_displayed
 first_option = get_element(:xpath, '//*[@resource-id="com.zzkko:id/tv_name"]')
   search_keywords = @last_search_input.split(" ")
   error_list = []

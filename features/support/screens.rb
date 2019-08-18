@@ -9,9 +9,14 @@ class Screens
     @me_screen
   end
 
-  def search_screen
-    @search_screen ||= SearchScreen.new
-    @search_screen
+  def item_screen
+    @item_screen ||= ItemScreen.new
+    @item_screen
+  end
+
+  def cart_screen
+    @cart_screen ||= CartScreen.new
+    @cart_screen
   end
   
 end

@@ -56,7 +56,15 @@ class Elements
     el.send_keys(text)
   end
 
+  def visible?
+    find.visible?
+  end
 
+  def isVisible
+    unless visible?
+      raise "Element not visible"
+    end
+  end
 
 
 
